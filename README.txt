@@ -48,6 +48,42 @@ Tip: open the printed URL in a desktop browser to confirm data is flowing
 (you'll see "[OK] CS2 connected" in the server window once CS2 reaches it).
 
 ----------------------------------------------------------------------
+OPTIONAL: AUTO-START THE SERVER WHEN YOU LAUNCH CS2
+----------------------------------------------------------------------
+
+So you never have to remember to run start.bat:
+
+1) Double-click  setup-autostart.bat . It prints one line, like:
+     "C:\...\launch-with-cs2.bat" %command%
+2) In Steam, right-click Counter-Strike 2 > Properties > Launch Options,
+   and paste that line in.
+3) Done. Press Play on CS2 as normal - the HUD server starts with the
+   game and shuts down when you quit. (A duplicate launch is harmless;
+   the extra copy just exits because the port is already in use.)
+
+To undo: clear the CS2 launch options box.
+
+----------------------------------------------------------------------
+OPTIONAL: HIDE THE ON-SCREEN HUD (KEEP THE RADAR)
+----------------------------------------------------------------------
+
+Your HP / ammo / money / score are on the glasses now, so you can hide
+CS2's on-screen HUD and keep only the radar (the one thing the glasses
+can't show).
+
+1) Copy  hide-hud.cfg  into your CS2 cfg folder (same place as the
+   gamestate_integration_glasses.cfg).
+2) In the CS2 console, type:  exec hide-hud
+   HUD hides, radar stays. Press P to toggle it back, or type
+   cl_drawhud 1 to restore.
+
+IMPORTANT: Valve locks these commands behind sv_cheats, so this only
+works in PRACTICE, offline-with-bots, and community servers that allow
+cheats. It does NOT work in official matchmaking (Premier / Competitive
+/ Casual) - there the on-screen HUD stays. Hiding your own HUD is a
+visual preference, not a cheat; Valve just gates the command.
+
+----------------------------------------------------------------------
 NOTES
 ----------------------------------------------------------------------
 
