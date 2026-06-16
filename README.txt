@@ -64,24 +64,28 @@ So you never have to remember to run start.bat:
 To undo: clear the CS2 launch options box.
 
 ----------------------------------------------------------------------
-OPTIONAL: HIDE THE ON-SCREEN HUD (KEEP THE RADAR)
+OPTIONAL: HIDE THE ON-SCREEN HUD
 ----------------------------------------------------------------------
 
 Your HP / ammo / money / score are on the glasses now, so you can hide
-CS2's on-screen HUD and keep only the radar (the one thing the glasses
-can't show).
+CS2's on-screen HUD.
 
 1) Copy  hide-hud.cfg  into your CS2 cfg folder (same place as the
    gamestate_integration_glasses.cfg).
 2) In the CS2 console, type:  exec hide-hud
-   HUD hides, radar stays. Press P to toggle it back, or type
-   cl_drawhud 1 to restore.
 
-IMPORTANT: Valve locks these commands behind sv_cheats, so this only
-works in PRACTICE, offline-with-bots, and community servers that allow
-cheats. It does NOT work in official matchmaking (Premier / Competitive
-/ Casual) - there the on-screen HUD stays. Hiding your own HUD is a
-visual preference, not a cheat; Valve just gates the command.
+Two options inside the file (pick one):
+  A) Hide the HUD but KEEP the radar/minimap (active by default).
+  B) Disable the ENTIRE HUD, kill feed only, no radar
+     (cl_draw_only_deathnotices 1).
+
+Press P to toggle the HUD back, or restore with cl_drawhud 1 (Option A)
+or cl_draw_only_deathnotices 0 (Option B).
+
+Heads-up: these are gated by sv_cheats, so they apply on practice,
+offline-with-bots, and community servers. Official matchmaking may keep
+the on-screen HUD on. Hiding your own HUD is a visual preference, not a
+cheat; Valve just gates the command.
 
 ----------------------------------------------------------------------
 NOTES
